@@ -21,6 +21,9 @@ const Signup = () => {
       setError('Signup failed');
     }
   };
+  const handlelogin=()=>{
+    loginav('/login')
+  }
 
   return (
     <div className='sign-main'>
@@ -33,7 +36,7 @@ const Signup = () => {
       <label>password</label><br/>
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} /><br/>
       <button onClick={handleSignup}>Sign Up</button>
-      <button onClick={handleSignup}>Login</button>
+      <button onClick={handlelogin}>Login</button>
       
       </div>
     </div>
