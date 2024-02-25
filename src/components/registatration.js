@@ -25,7 +25,8 @@ const Signup = () => {
   return (
     <div className='sign-main'>
       <div className='sign-form'>
-      <h2>Signup</h2>
+      <h1 style={{color:'rgb(8, 14, 85)'}}>D3V Technology Solutions</h1>
+      <h1>Signup</h1>
       {error && <p style={{color:'red'}}>{error}</p>}
       <label>username</label><br/>
       <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} /><br/>
