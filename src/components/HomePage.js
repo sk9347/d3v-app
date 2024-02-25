@@ -107,7 +107,7 @@ const HomePage = () => {
                   <p>{val.description}</p>
                   <p>
                     <button onClick={() => handleAddToCart(val)}>
-                      Add to Cart
+                      See More
                     </button>
                   </p>
                 </div>
