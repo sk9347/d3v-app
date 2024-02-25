@@ -47,35 +47,3 @@ export default Signup;
 
 
 
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// const Signup = () => {
-//   const [username, setUsername] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleSignup = async () => {
-//     try {
-//       const response = await axios.post('https://dummyjson.com/users/add', {
-//          username:username,
-//           password:password
-//          });
-//       console.log('Signup successful:', response.data);
-//       console.log(username,password)
-     
-//     } catch (error) {
-//       console.error('Signup failed:', error);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Signup</h2>
-//       <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-//       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-//       <button onClick={handleSignup}>Sign Up</button>
-//     </div>
-//   );
-// };
-
-// export default Signup;

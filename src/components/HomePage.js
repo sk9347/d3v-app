@@ -21,7 +21,7 @@ const HomePage = () => {
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
-    setCurrentPage(1); // Reset current page when search term changes
+    setCurrentPage(1); 
   };
 
   const handleSort = (event) => {
