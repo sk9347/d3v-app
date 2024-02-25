@@ -58,6 +58,14 @@ const HomePage = () => {
 
   const context = useContext(AuthContext);
 
+  const nextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
   return (
     <>
       <div className="home-container">
@@ -117,6 +125,19 @@ const HomePage = () => {
         </div>
         {/* Pagination */}
         <div style={{ display: "flex", justifyContent: "center" }}>
+          <button
+            onClick={prevPage}
+            disabled={currentPage === 1}
+            style={{
+              backgroundColor: "rgb(8, 14, 85)",
+              color: "white",
+              borderRadius: "50%",
+              margin: "1px",
+              padding: "1em",
+            }}
+          >
+            Prev
+          </button>
           {Array.from(
             { length: Math.ceil(sortedData.length / itemsPerPage) },
             (_, i) => (
@@ -135,6 +156,19 @@ const HomePage = () => {
               </button>
             )
           )}
+          <button
+            onClick={nextPage}
+            disabled={currentPage === Math.ceil(sortedData.length / itemsPerPage)}
+            style={{
+              backgroundColor: "rgb(8, 14, 85)",
+              color: "white",
+              borderRadius: "50%",
+              margin: "1px",
+              padding: "1em",
+            }}
+          >
+            Next
+          </button>
         </div>
         <div className="footer">
           <h4>© Copyright:D3V Technology Solutions</h4>
